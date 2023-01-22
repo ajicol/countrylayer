@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OwnerChangeContractManager</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISCHANGED( OwnerId )
+&amp;&amp; $Permission.LeadOwnerChangeForContractManager
+&amp;&amp; (ISBLANK( Country ) || ISPICKVAL( LeadSource,&quot;&quot; ))</errorConditionFormula>
+    <errorMessage>Country and Lead Source can not be blank when Lead Owner is changed by Contract Manager.</errorMessage>
+</ValidationRule>

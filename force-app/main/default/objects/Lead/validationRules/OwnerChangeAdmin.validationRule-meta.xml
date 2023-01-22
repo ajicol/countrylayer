@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OwnerChangeAdmin</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISCHANGED( OwnerId )&amp;&amp; $Permission.LeadOwnerChangeForSystemAdministrator &amp;&amp; ISPICKVAL( LeadSource,&quot;&quot; )</errorConditionFormula>
+    <errorDisplayField>LeadSource</errorDisplayField>
+    <errorMessage>Lead Source can not be blank when Lead Owner is changed by System Administrator</errorMessage>
+</ValidationRule>

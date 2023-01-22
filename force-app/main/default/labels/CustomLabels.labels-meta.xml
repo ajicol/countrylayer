@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>CountrylayerCalloutError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label is used for any component</shortDescription>
+        <value>Countrylayer.com callout error. StatusCode={0}, error: {1}</value>
+    </labels>
+    <labels>
+        <fullName>NoPermissionUpsertCountry</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label is used for any component</shortDescription>
+        <value>No permission to insert or update for Country object or it's fields.</value>
+    </labels>
+    <labels>
+        <fullName>NoPermissionReadCountry</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label is used for any component</shortDescription>
+        <value>No permission to read for Country object or it's fields.</value>
+    </labels>
+</CustomLabels>
