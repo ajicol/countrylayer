@@ -14,8 +14,8 @@ public class CountrylayerCalloutService {
 		request.setMethod('GET');
 
 		HttpResponse response = http.send(request);
-		String responseBody = response.getbody();
-		Integer statusCode = response.getstatusCode();
+		String responseBody = response.getBody();
+		Integer statusCode = response.getStatusCode();
 		if(statusCode == 200 && responseBody != null && !responseBody.containsIgnoreCase('"error":')) {
 			result = (List<Models.CountryInfo>) JSON.deserialize(responseBody, List<Models.CountryInfo>.class);
 		} else {

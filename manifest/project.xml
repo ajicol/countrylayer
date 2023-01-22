@@ -9,7 +9,7 @@
         <members>LeadTriggerHandler</members>
         <members>LeadTriggerHandlerTest</members>
         <members>Models</members>
-        <members>ScheduableCountryInfoUpdate</members>
+        <members>SchedulableCountryInfoUpdate</members>
         <members>UnitTestUtils</members>
         <name>ApexClass</name>
     </types>

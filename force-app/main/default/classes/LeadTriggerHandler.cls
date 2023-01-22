@@ -1,6 +1,6 @@
 public with sharing class LeadTriggerHandler {
 
-	public static final Boolean COUNTRY_CODES_ENABLED = Lead.getSobjectType().getDescribe().fields.getMap().keySet().contains(COUNTRY_CODE_FIELD.toLowerCase());
+	public static final Boolean COUNTRY_CODES_ENABLED = Lead.getSObjectType().getDescribe().fields.getMap().keySet().contains(COUNTRY_CODE_FIELD.toLowerCase());
 	public static final String COUNTRY_CODE_FIELD = 'CountryCode';
 
 	public void onBeforeInsert(List<Lead> newLeads){
@@ -66,7 +66,7 @@ public with sharing class LeadTriggerHandler {
 		}
 		List<Country__c> countries = [SELECT Name, Capital__c, ISOCode2__c, ISOCode3__c, Region__c
 		                              FROM Country__c
-		                              WHERE ISOCode2__c in: countryIdentifiers OR Name in: countryIdentifiers
+		                              WHERE ISOCode2__c IN: countryIdentifiers OR Name IN: countryIdentifiers
 		                              LIMIT 500];
 
 		for (Country__c country : countries) {

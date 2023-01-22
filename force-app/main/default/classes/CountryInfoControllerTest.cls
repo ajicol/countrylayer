@@ -1,10 +1,10 @@
-@isTest
+@IsTest
 private class CountryInfoControllerTest {
 
 	private class MockError implements HttpCalloutMock {
-		public HTTPResponse respond(HTTPRequest req) {
+		public HttpResponse respond(HttpRequest req) {
 			if (req.getEndpoint().endsWith('000000')) {
-				HTTPResponse res = new HTTPResponse();
+				HttpResponse res = new HttpResponse();
 				res.setBody('{"success": false,"error": {"code": 101,"type": "invalid_access_key",'
 							+ '"info": "You have not supplied a valid API Access Key. '
 							+ '[Technical Support: support@apilayer.com]"}');
@@ -17,8 +17,8 @@ private class CountryInfoControllerTest {
 		}
 	}
 
-	@isTest
-	static void should_runShedulableWithoutErrors(){
+	@IsTest
+	static void should_runSchedulableWithoutErrors(){
 		System.runAs(UnitTestUtils.buildCountryInfoUser()) {
 			String errorMessage;
 			setMockOK();
@@ -35,7 +35,7 @@ private class CountryInfoControllerTest {
 		}
 	}
 
-	@isTest
+	@IsTest
 	static void should_throwError_when_incorrectAPIKey(){
 		System.runAs(UnitTestUtils.buildCountryInfoUser()) {
 			CountrylayerCalloutService.API_KEY_PARAMETER = '000000000';
@@ -54,7 +54,7 @@ private class CountryInfoControllerTest {
 		}
 	}
 
-	@isTest
+	@IsTest
 	static void should_insertCountries(){
 		System.runAs(UnitTestUtils.buildCountryInfoUser()) {
 			setMockOK();
@@ -70,7 +70,7 @@ private class CountryInfoControllerTest {
 		}
 	}
 
-	@isTest
+	@IsTest
 	static void should_updateCountries(){
 		System.runAs(UnitTestUtils.buildCountryInfoUser()) {
 			Country__c usa = new Country__c(Name = 'USA', ISOCode2__c = 'US', ISOCode3__c = 'USA');
@@ -90,7 +90,7 @@ private class CountryInfoControllerTest {
 		}
 	}
 
-	@isTest
+	@IsTest
 	static void should_throwError_when_noUpdatePermissionForCountry(){
 		System.runAs(UnitTestUtils.buildStandardUser()) {
 			String errorMessage;

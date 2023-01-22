@@ -1,4 +1,4 @@
-@isTest
+@IsTest
 private class LeadTriggerHandlerTest {
 
 	@TestSetup
@@ -10,7 +10,7 @@ private class LeadTriggerHandlerTest {
 		};
 	}
 
-	@isTest
+	@IsTest
 	static void should_throwException_when_noAccessToCountryObject() {
 		System.runAs(UnitTestUtils.buildStandardUser()){
 			String errorMessage;
@@ -24,7 +24,7 @@ private class LeadTriggerHandlerTest {
 		}
 	}
 
-	@isTest
+	@IsTest
 	static void should_updateCountryInfo_when_newLeads() {
 		System.runAs(UnitTestUtils.buildCountryInfoUser()){
 			Lead lead1 = buildLead('Smith', 'Test1 Ltd', 'Slovakia', 'SK');
@@ -36,7 +36,7 @@ private class LeadTriggerHandlerTest {
 		}
 	}
 
-	@isTest
+	@IsTest
 	static void should_updateCountryInfo_when_leadsUpdated() {
 		System.runAs(UnitTestUtils.buildCountryInfoUser()){
 			Lead lead1 = buildLead('Smith', 'Test1 Ltd', 'Slovakia', 'SK');
