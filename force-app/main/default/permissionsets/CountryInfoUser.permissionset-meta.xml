@@ -32,6 +32,10 @@
         <apexClass>UnitTestUtils</apexClass>
         <enabled>true</enabled>
     </classAccesses>
+    <customMetadataTypeAccesses>
+        <enabled>true</enabled>
+        <name>Countrylayer_Setting__mdt</name>
+    </customMetadataTypeAccesses>
     <fieldPermissions>
         <editable>true</editable>
         <field>Country__c.Capital__c</field>

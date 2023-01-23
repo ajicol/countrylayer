@@ -22,6 +22,7 @@
         <members>Country__c.ISOCode2__c</members>
         <members>Country__c.ISOCode3__c</members>
         <members>Country__c.Region__c</members>
+        <members>Countrylayer_Setting__mdt.Value__c</members>
         <members>Lead.Capital__c</members>
         <members>Lead.Country__c</members>
         <members>Lead.ISOCode2__c</members>
@@ -41,7 +42,12 @@
         <name>CustomLabels</name>
     </types>
     <types>
+        <members>Countrylayer_Setting.API_Key</members>
+        <name>CustomMetadata</name>
+    </types>
+    <types>
         <members>Country__c</members>
+        <members>Countrylayer_Setting__mdt</members>
         <members>Lead</members>
         <name>CustomObject</name>
     </types>
@@ -60,6 +66,7 @@
     </types>
     <types>
         <members>Country__c-Country Layout</members>
+        <members>Countrylayer_Setting__mdt-Countrylayer Setting Layout</members>
         <members>Lead-Lead Layout</members>
         <name>Layout</name>
     </types>

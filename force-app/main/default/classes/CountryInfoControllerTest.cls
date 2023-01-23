@@ -3,7 +3,7 @@ private class CountryInfoControllerTest {
 
 	private class MockError implements HttpCalloutMock {
 		public HttpResponse respond(HttpRequest req) {
-			if (req.getEndpoint().endsWith('000000')) {
+			if (req.getEndpoint().endsWith('&access_key=')) {
 				HttpResponse res = new HttpResponse();
 				res.setBody('{"success": false,"error": {"code": 101,"type": "invalid_access_key",'
 							+ '"info": "You have not supplied a valid API Access Key. '
@@ -38,7 +38,7 @@ private class CountryInfoControllerTest {
 	@IsTest
 	static void should_throwError_when_incorrectAPIKey(){
 		System.runAs(UnitTestUtils.buildCountryInfoUser()) {
-			CountrylayerCalloutService.API_KEY_PARAMETER = '000000000';
+			CountrylayerCalloutService.apiKeyParameter = '&access_key=';
 			Test.setMock(HttpCalloutMock.class, new MockError());
 			String errorMessage;
 
